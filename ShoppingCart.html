@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>img{ border-radius: 20px; }</style>
+    <link rel="stylesheet" href="style.css">
+    <script src="test.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <a href="home.php" class="logo" ><img src="NEW Logo.jpg" alt="Logo" width="52px" height="52px" ></a>
+        <nav class="navbar">
+            <a href="home.php">Home</a>
+            <a href="Catigoris.html">Catigoris</a>
+            <a href="ShoppingCart.html" >Shopping Cart</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <ShoppingCart>
+        <p>Full Name: <input type="text" id="p1"></p>
+        <p>Address: <input type="text" id="p3"></p>
+        <p>Phone Number: <input type="text" id="p2"></p>
+        <p>Type of order: 
+            <select name="orderType" id="orderType" onchange="appear()">
+                <option value="">Select Your products</option>
+                <option value="PowerBanks">PowerBanks</option>
+                <option value="Smartwatches">Smartwatches</option>
+                <option value="Earbuds">Earbuds</option>
+                <option value="HeadSets">HeadSets</option>
+                <option value="Mouses">Mouses</option>
+                <option value="DistinctItems">Distinct Items</option>
+            </select>
+        </p>
+        <div class="Items">
+            <select name="PowerBanks" id="powerBanksSelect" style="display: none ;">
+                <option value="">Select Power Bank</option>
+                <option value="XO Wireless battery pack">XO Wireless battery pack </option>
+                <option value="Bavin 20,000">Bavin 20,000</option>
+                <option value="Sunpin 20,000">Sunpin 20,000</option>
+                <option value="Sunpin 10,000">Sunpin 10,000</option>
+                <option value="KinVale 20,000">KinVale 20,000</option>
+                <option value="XO 10,000">XO 10,000</option>
+                <option value="Moxom 20,000 PD">Moxom 20,000 PD</option>
+                <option value="Polymer 20,000">Polymer 20,000</option>
+                <option value="Bavin 30,000">Bavin 30,000</option>
+            </select>
+            
+            <select name="Smartwatches" id="SmartWatchesSelect" style="display: none;">
+                <option value="">Select SmartWatch</option>
+                <option value="Modio MC92 ULTRA 2">Modio MC92 ULTRA 2</option>
+                <option value="S9 PRO Smart Watch">S9 PRO Smart Watch</option>
+                <option value="T900 Ultra 2">T900 Ultra 2</option>
+                <option value="Modio MC95 Ultra 2">Modio MC95 Ultra 2</option>
+                <option value="GT5 SMART WATCH">GT5 SMART WATCH</option>
+                <option value="Z80 8 bands SmartWatch">Z80 8 bands SmartWatch</option>
+            </select>
+
+            <select name="Earbuds" id="EarbudsSelect" style="display: none;">
+                <option value="">Select Earbuds</option>
+                <option value="XO Orignal Earbuds">XO Orignal Earbuds 20</option>
+                <option value="Galaxy Buds 2 Pro">Galaxy Buds 2 Pro</option>
+                <option value="Airpods pro 2">Airpods pro 2</option>
+                <option value="Airpods 3">Airpods 3</option>
+                <option value="Airpods 2">Airpods 2</option>
+                <option value="i11 Earbuds">i11 Earbuds</option>
+                <option value="Original Moxom Earbuds">Original Moxom Earbuds</option>
+                <option value="M10 Earbuds">M10 Earbuds</option>
+            </select>
+
+            <select name="HeadSets" id="HeadSetsSelect" style="display: none;">
+                <option value="">Select HeadSets</option>
+                <option value="A11 HEADSET">A11 HEADSET</option>
+                <option value="MOXOM Headset">MOXOM Headset</option>
+                <option value="Airpods Max">Airpods Max</option>
+                <option value="P90 HeadSet">P90 HeadSet</option>
+                <option value="JBL HeadSet">JBL HeadSet</option>
+                <option value="Green Lion HeadSet">Green Lion HeadSet</option>
+                <option value="Meetion Gaming HeadSet">Meetion Gaming HeadSet</option>
+                <option value="P47m HeadSet">P47m HeadSet</option>
+                <option value="Monster Airmars N5 Lite">Monster Airmars N5 Lite</option>
+                <option value="Original Trust Radius headset">Original Trust Radius headset</option>
+                <option value="Original Scorpion headset">Original Scorpion headset</option>
+            </select>
+
+            <select name="Mouses" id="MousesSelect" style="display: none;">
+                <option value="">Select Mouses</option>
+                <option value="Original Trust Gaming mouse">Original Trust Gaming mouse</option>
+                <option value="m305 mouse">m305 mouse</option>
+                <option value="m4 wireless mouse">m4 wireless mouse</option>
+                <option value="Original moxom mouse">Original moxom mouse</option>
+                <option value="Wireless Kakusiga mouse"> Wireless Kakusiga mouse</option>
+                <option value="Original Gaming HP Mouse">Original Gaming HP Mouse</option>
+                <option value="Gaming Mouse 1">Gaming Mouse 1</option>
+                <option value="Gaming Mouse 2">Gaming Mouse 2</option>
+            </select>
+
+            <select name="DistinctItems" id="DistinctItemsSelect" style="display: none;">
+                <option value="">Select DistinctItems</option>
+                <option value="PS4 Controller">PS4 Controller</option>
+                <option value="Q08 Gimbal Stabilizer">Q08 Gimbal Stabilizer</option>
+                <option value="XO 2 in 1 desk lamp">XO 2 in 1 desk lamp</option>
+                <option value="XO Portable Shaver">XO Portable Shaver</option>
+                <option value="Salem Pouch">Salem Pouch</option>
+                <option value="Green Lion Elegant Pouch">Green Lion Elegant Pouch</option>
+                <option value="Vintage T9 Shaver">Vintage T9 Shaver</option>
+                <option value="VGR Shaver">VGR Shaver</option>
+            </select>
+
+        </div>
+        <button id="Receipt" onclick="generateReceipt()">Download Receipt</button>
+        <script src="test.js"></script>
+    </ShoppingCart>
+
+    <p>Products Videos on the instagram page: 
+        <a href="https://www.instagram.com/aj_shoping_center?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">AJ_Shopping_Center</a>
+    </p>
+
+</body>
+</html>
