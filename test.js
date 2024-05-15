@@ -10,6 +10,7 @@ function generateReceipt() {
     receiptText += "Address: " + address + "\n";
     receiptText += "Phone Number: " + phoneNumber + "\n";
     receiptText += "Type of Order: " + orderType + "\n";
+    
     if( orderType == 'PowerBanks'){
         var powerBanks = document.getElementById('powerBanksSelect').value;
         receiptText+= "Item: " + powerBanks + "\n";
